@@ -1,0 +1,26 @@
+{
+  "name": "mappe_ccf",
+  "version": "1.0.0",
+  "description": "Applicazione web mappe Milano.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fix-22/5C_CecireCicoriaFalcone_Mappe.git"
+  },
+  "keywords": [
+    "maps"
+  ],
+  "author": "Simone Cecire, Davide Cicoria, Andrea Falcone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fix-22/5C_CecireCicoriaFalcone_Mappe/issues"
+  },
+  "homepage": "https://github.com/Fix-22/5C_CecireCicoriaFalcone_Mappe#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "leaflet": "^1.9.4"
+  }
+}
