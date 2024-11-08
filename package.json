@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Fix-22/5C_CecireCicoriaFalcone_Mappe#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "leaflet": "^1.9.4"
+    "bootstrap": "^5.3.3"
   }
 }
