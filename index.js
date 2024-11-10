@@ -7,16 +7,24 @@ const mapContainer = document.getElementById("map");
 
 const componenteForm = generateForm(formContainer) ;
 const map = generateMap(mapContainer);
+const componentGeoencoder = generateGeoencoder();
 
 componenteForm.build() ;
-componenteForm.onsubmit() ; //da aggiungere per parametro la funzione che aggiunge effettivamente il ping sulla mappa 
+componenteForm.onsubmit((address) => {
+    componentGeoencoder.encode(address)
+    .then((data) => {
+        map.addPlace(data);
+        map.render();
+        console.log(data);
+    })
+});
 componenteForm.render() ;
 
 fetch("./config.json")
 .then(r => r.json())
 .then(data => {
     let API_TOKEN = data["API_TOKEN"];
-
+    componentGeoencoder.build(API_TOKEN);
     map.build([45.4639102, 9.1906426]); // default viene usato il Duomo di Milano
     map.render();
 });
