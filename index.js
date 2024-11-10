@@ -5,7 +5,12 @@ import {generateMap} from "./mapComponent/mapComponent.js"
 const formContainer = document.getElementById("formContainer");
 const mapContainer = document.getElementById("map");
 
+const componenteForm = generateForm(formContainer) ;
 const map = generateMap(mapContainer);
+
+componenteForm.build() ;
+componenteForm.onsubmit() ; //da aggiungere per parametro la funzione che aggiunge effettivamente il ping sulla mappa 
+componenteForm.render() ;
 
 fetch("./config.json")
 .then(r => r.json())
