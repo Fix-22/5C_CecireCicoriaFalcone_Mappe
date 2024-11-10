@@ -9,8 +9,9 @@ export const generateForm = (parentElement) => {
         },
         render : function() {
             let html = `<form id="streetForm" class="container">
+                <h2>Ricerca luogo</h2>
                 <div class="input-group">
-                    <label class="input-group-text">Via</label>
+                    <label class="input-group-text">Luogo</label>
                     <input type="text" id="streetInput" class="form-control" />
                     <button type="button" id="submitButton" class="btn btn-primary">Invia</button>
                 </div>
@@ -23,7 +24,6 @@ export const generateForm = (parentElement) => {
             submitButton.onclick = () => {
                 let address = document.getElementById('streetInput').value ;
                 console.log('address: ' + address) ;
-                console.log(callback) ;
                 callback(address) ;
             }
         }

@@ -13,13 +13,14 @@ export const generateGeoencoder = () => {
                 .then((r) => r.json())
                 .then((json) => {
                     if (!json.hasOwnProperty("error")) {
-                        data.name = name;
+                        data.name = json[0].display_name;
                         data.coords = [json[0].lat, json[0].lon];
                         resolve(data)
                     } else {
                         reject(json.error);
                     }
-                });
+                })
+                .catch(err => reject(err));
             })
         }
 
