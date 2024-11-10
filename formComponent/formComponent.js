@@ -25,6 +25,7 @@ export const generateForm = (parentElement) => {
                 let address = document.getElementById('streetInput').value ;
                 console.log('address: ' + address) ;
                 callback(address) ;
+                document.getElementById('streetInput').value = "";
             }
         }
     }
