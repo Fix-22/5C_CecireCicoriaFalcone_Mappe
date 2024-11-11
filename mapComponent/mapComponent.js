@@ -15,6 +15,10 @@ export const generateMap = (parentElement) => {
                 const marker = L.marker(place.coords).addTo(map);
                 marker.bindPopup("<b>" + place.name + "</b>");
              });
+            
+             if (places.length > 0) {
+                map.setView(places[places.length -1].coords, 14);
+             }
         },
         addPlace: (place) => {
             if (places.indexOf(place) === -1) {
